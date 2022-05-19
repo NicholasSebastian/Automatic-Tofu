@@ -42,11 +42,11 @@ class Tofu {
     return await this.session.page.$(selector);
   }
 
-  public async logLatestMessage() {
-    const message = await this.getLatestMessage();
-    const content = message?.$eval("div[id^='message-content']", e => (e as HTMLElement).innerText);
-    console.log(content);
-  }
+  // public async logLatestMessage() {
+  //   const message = await this.getLatestMessage();
+  //   const content = message?.$eval("div[id^='message-content']", e => (e as HTMLElement).innerText);
+  //   console.log(content);
+  // }
 
   private getRandom(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);

@@ -11,7 +11,6 @@ console.log(`Using the channel '${channel}'`);
 
 let count = 0;
 setInterval(async () => {
-  count++;
   const discord = await Discord.createInstance({ email, password }, channel);
   const tofu = new Tofu(discord);
 
@@ -20,4 +19,5 @@ setInterval(async () => {
   }
 
   await discord.close();
+  count++;
 }, 1000 * 60);
